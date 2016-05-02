@@ -1,0 +1,12 @@
+<h1>Creatures</h1>
+
+ <% for creature in @creatures %>
+<p>
+   <strong>Creature name:</strong> <%= link_to "#{creature.name}", creature_path(creature) %> <br /> <strong>Description:</strong> <%= creature.description%><br />
+   <%= link_to "Edit", edit_creature_path(creature) %>
+   <%= button_to "Delete", creature, method: :delete %>
+   <% end %>
+
+</p>
+
+<%= link_to "Creature Create", new_creature_path %>
